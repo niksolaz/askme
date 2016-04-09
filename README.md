@@ -1,6 +1,6 @@
-sms-frontend
+ASKME
 =====================
-Fronted part of the SMS project
+Ask a question and get a reply
 
 
 ### Installation
