@@ -1,0 +1,80 @@
+{
+  "name": "askme",
+  "version": "1.0.0",
+  "description": "ask a question and get answer",
+  "scripts": {
+    "build": "webpack",
+    "postinstall": "npm run build",
+    "start": "node start.js",
+    "lint": "eslint src",
+    "develop": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niksolaz/askme.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "author": "Nicola Solazzo (http://github.com/niksolaz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niksolaz/askme/issues"
+  },
+  "homepage": "https://github.com/niksolaz/askme",
+  "devDependencies": {
+    "autoprefixer": "^6.1.1",
+    "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "classnames": "^2.2.1",
+    "clean-css": "^3.4.8",
+    "css-loader": "^0.23.0",
+    "eslint-plugin-react": "^3.6.2",
+    "history": "^1.13.1",
+    "node-sass": "^3.4.2",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^1.0.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "classnames": "^2.2.1",
+    "compression": "^1.6.0",
+    "express": "^4.13.3",
+    "history": "^1.13.1",
+    "lodash": "^3.10.1",
+    "react": "^0.14.6",
+    "react-bootstrap": "^0.28.2",
+    "react-bootstrap-switch": "^3.4.1",
+    "react-cookie": "^0.4.2",
+    "react-dom": "^0.14.3",
+    "react-input-switch": "^1.1.0",
+    "react-redux": "^4.0.0",
+    "react-router": "^1.0.0",
+    "react-toggle": "^2.0.1",
+    "redux": "^3.0.4",
+    "redux-thunk": "^1.0.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
+  }
+}
