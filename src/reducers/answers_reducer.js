@@ -1,4 +1,8 @@
-import {} from '../actions/actionTypes'
+import {
+	GET_ANSWERS_MESSAGES_PENDING,
+	GET_ANSWERS_MESSAGES_SUCCESS,
+	GET_ANSWERS_MESSAGES_ERROR
+} from '../actions/actionTypes'
 
 let initialState = {
 	error: null,

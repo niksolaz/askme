@@ -4,8 +4,8 @@ import AnswersMessages from './answers_reducer';
 
 
 const rootReducer = combineReducers({
-	questionMessages,
-	answersMessages
+	QuestionMessages,
+	AnswersMessages
 });
 
 
