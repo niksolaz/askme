@@ -13,7 +13,7 @@ export default class Question extends React.Component {
         return(
             <div className="container">
                 <Header  />
-                <h3>Question</h3>
+                <h3> Question </h3>
                 <br/>
                 <QuestionMessageList />      
             </div>

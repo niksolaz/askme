@@ -8,8 +8,18 @@ import MessageList from './MessageList.jsx';
 class AnswersMessageList extends Component {
 
   render() {
-    return (
-      <MessageList />
+    return ( 
+      <div className="container">
+          <div className="row">
+            <ul className="list-group">
+              <li className="list-group-item">
+                <span className="badge"> 234 </span>
+                 example answer 
+              </li>
+            </ul>
+          </div>  
+          <MessageList />     
+      </div>
     );
 
   }
