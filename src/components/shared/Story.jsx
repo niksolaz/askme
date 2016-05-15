@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import Relay from ('react-relay');
 import classnames from 'classnames';
 
-export default class Story extends Component {
+class Story extends Component {
   render() {
     var story = this.props.story;
     return (
@@ -14,3 +15,19 @@ export default class Story extends Component {
     );
   }
 }
+
+export default Relay.createContainer(Story, {
+  fragments: {
+    story: () => Relay.QL`
+      fragment on Story {
+        author {
+          name: 'Nik',
+          profilePicture {
+            uri: "https://…"
+          }
+        },
+        text:"The first Relay blog post is up…"
+      }
+    `,
+  },
+});
