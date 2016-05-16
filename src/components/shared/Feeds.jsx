@@ -7,9 +7,9 @@ export default class Feeds extends Component {
   render() {
     return (
       <div>
-        <div class="panel panel-default">
-          <div class="panel-heading">Feeds</div>
-          <div class="panel-body">
+        <div className="panel panel-default">
+          <div className="panel-heading">Feeds</div>
+          <div className="panel-body">
             <ul className="list-group">
               <li className="list-group-item">Mobile Applications</li>
               <li className="list-group-item">Technology Startups</li>

@@ -7,9 +7,9 @@ export default class TredingNow extends Component {
   render() {
     return (
       <div>
-        <div class="panel panel-default">
-          <div class="panel-heading">Treding Now</div>
-          <div class="panel-body">
+        <div className="panel panel-default">
+          <div className="panel-heading">Treding Now</div>
+          <div className="panel-body">
             <ul className="list-group">
               <li className="list-group-item">Vivi Al Debuts</li>
               <li className="list-group-item">Trump Goes After Amazon</li>
