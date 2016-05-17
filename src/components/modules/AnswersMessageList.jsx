@@ -11,10 +11,19 @@ class AnswersMessageList extends Component {
     return ( 
       <div className="container">
           <div className="row">
+            Answer 
             <ul className="list-group">
               <li className="list-group-item">
                 <span className="badge"> 234 </span>
-                 example answer 
+                 Should I abandon my Objective-c app and rewrite everything in Swift?
+              </li>
+              <li className="list-group-item">
+                <span className="badge"> 234 </span>
+                 Should I make IOS or Android apps (I know the basics of both Java and Objective C/Swift)? 
+              </li>
+              <li className="list-group-item">
+                <span className="badge"> 234 </span>
+                 Did Perfect.org anticipate that Swift would have been open sourced? 
               </li>
             </ul>
           </div>  
