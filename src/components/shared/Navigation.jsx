@@ -13,19 +13,26 @@ export default class Navigation extends Component {
             <div className="navbar-header">
               <Link to={'/'} className="navbar-brand">
               <img alt="Brand" src="..." />
-                <span className="glyphicon glyphicon-home" aria-hidden="true"></span>
               </Link>
             </div>
             <div className="collapse navbar-collapse" id="my-navbar">
                 <SearchBar />
                 <ul className="nav navbar-nav">
-                
+
                     <li className="navbar-link"><Link to={'/Question'}>
                       <span className="glyphicon glyphicon-th-list" aria-hidden="true"> Question </span>
                     </Link></li>
 
                     <li className="navbar-link"><Link to={'/Answers'}>
                       <span className="glyphicon glyphicon-pencil" aria-hidden="true"> Answers </span>
+                    </Link></li>
+
+                    <li className="navbar-link"><Link to={'/Notification'}>
+                      <span className="glyphicon glyphicon-bell" aria-hidden="true"> Notification </span>
+                    </Link></li>
+
+                    <li className="navbar-link"><Link to={'/User'} className="navbar-brand">
+                      <span className="glyphicon glyphicon-user" aria-hidden="true"> User </span>
                     </Link></li>
 
                 </ul>
