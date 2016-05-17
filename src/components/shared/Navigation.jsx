@@ -10,17 +10,16 @@ export default class Navigation extends Component {
     return (
       <nav className="navbar navbar-default">
           <div className="container-fluid">
+            <div className="navbar-header">
+              <Link to={'/'} className="navbar-brand">
+              <img alt="Brand" src="..." />
+                <span className="glyphicon glyphicon-home" aria-hidden="true"></span>
+              </Link>
+            </div>
             <div className="collapse navbar-collapse" id="my-navbar">
+                <SearchBar />
                 <ul className="nav navbar-nav">
-
-                    <li className="navbar-link"><Link to={'/'}>
-                      <span className="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    </Link></li>
-
-                    <li className="navbar-link">
-                      <SearchBar />
-                    </li>
-
+                
                     <li className="navbar-link"><Link to={'/Question'}>
                       <span className="glyphicon glyphicon-th-list" aria-hidden="true"> Question </span>
                     </Link></li>
