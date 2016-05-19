@@ -8,7 +8,7 @@ export default class EmploymentProfile extends Component {
     return (
       <div>
 
-      	<div className="col-lg-3">
+      	<div className="col-lg-6">
       		<label>Where have you worked?</label>
         	<div className="input-group">
             	<input type="text" className="form-control" placeholder="Add Workplaces"/>

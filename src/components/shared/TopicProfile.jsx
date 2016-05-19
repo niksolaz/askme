@@ -8,7 +8,7 @@ export default class TopicProfile extends Component {
     return (
       <div>
 
-      	<div className="col-lg-3">
+      	<div className="col-lg-6">
       		<label>What topics do you know about?</label>
         	<div className="input-group">
             	<input type="text" className="form-control" placeholder="Add Topic"/>

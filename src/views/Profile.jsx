@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 
 import Header from '../components/modules/Header.jsx';
 import InfoProfile from '../components/modules/InfoProfile.jsx';
+import UserProfile from '../components/modules/UserProfile.jsx';
 
 import {Link, PropTypes} from 'react-router';
 
@@ -11,7 +12,8 @@ export default class Profile extends React.Component {
         return(
             <div className="container">
                 <Header  />
-                <InfoProfile />  
+                <InfoProfile />
+                <UserProfile />
             </div>
             );
     }

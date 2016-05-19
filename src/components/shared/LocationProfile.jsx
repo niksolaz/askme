@@ -8,7 +8,7 @@ export default class LocationProfile extends Component {
     return (
       <div>
 
-      	<div className="col-lg-3">
+      	<div className="col-lg-6">
       		<label>Where do you currently live?</label>
         	<div className="input-group">
             	<input type="text" className="form-control" placeholder="Add Locations"/>
