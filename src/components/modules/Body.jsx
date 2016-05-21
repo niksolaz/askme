@@ -4,6 +4,7 @@ import Feeds from '../shared/Feeds.jsx';
 import TredingNow from '../shared/TredingNow.jsx';
 import TopStoryForYou from '../shared/TopStoryForYou.jsx';
 import SetUpYourAccount from '../shared/SetUpYourAccount.jsx';
+import FeedList from '../shared/FeedList.jsx';
 
 export default class Body extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class Body extends Component {
         		<TredingNow />
         	</div>
         	<div className="col-xs-7">
-        		<TopStoryForYou />
+        		<FeedList />
         	</div>
         	<div className="col-xs-3">
         		<SetUpYourAccount />
