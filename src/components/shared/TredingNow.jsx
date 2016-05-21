@@ -8,10 +8,10 @@ export default class TredingNow extends Component {
     return (
       <div className="feeds">
         <div className="row">
-          <div className="col-xs-6">
+          <div className="col-xs-8">
             <span className="trending-list-icon"></span><span style={{fontWeight:'bold'}}>Trending now</span>
           </div>
-          <div className="col-xs-3 col-xs-offset-3">
+          <div className="col-xs-3">
             <span style={{fontWeight:'bold'}}>Edit</span>
           </div>
         </div>
