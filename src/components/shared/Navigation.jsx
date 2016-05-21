@@ -7,13 +7,13 @@ import PopoverElement from './PopoverElement.jsx';
 
 var notificationButton = (
   <span className="glyphicon glyphicon-bell" aria-hidden="true"> 
-    Notification 
+    Notifications
   </span>
 );
 
 var userButton = (
-  <span className="glyphicon glyphicon-bell" aria-hidden="true"> 
-    User
+  <span> 
+    <img src="http://placehold.it/18x18" className="profile-image img-circle" /> Nicola
   </span>
 );
 export default class Navigation extends Component {
@@ -24,26 +24,26 @@ export default class Navigation extends Component {
           <div className="container-fluid">
             <div className="navbar-header">
               <Link to={'/'} className="navbar-brand">
-              <img alt="Brand" src="..." />
+              <span className="logoMain">Ask Me</span>
               </Link>
             </div>
             <div className="collapse navbar-collapse" id="my-navbar">
                 <SearchBar />
-                <ul className="nav navbar-nav">
+                <ul className="nav navbar-nav navbar-right">
 
-                    <li className="navbar-link"><Link to={'/Question'}>
-                      <span className="glyphicon glyphicon-th-list" aria-hidden="true"> Question </span>
+                    <li className="navbar-link active"><Link to={'/Question'}>
+                      <span className="glyphicon glyphicon-th-list" aria-hidden="true"> Read </span>
                     </Link></li>
 
                     <li className="navbar-link"><Link to={'/Answers'}>
-                      <span className="glyphicon glyphicon-pencil" aria-hidden="true"> Answers </span>
+                      <span className="glyphicon glyphicon-pencil" aria-hidden="true"> Answer </span>
                     </Link></li>
 
                     <li className="navbar-link"><Link to={'#'}>
                       <PopoverElement popoverTitle="See all the notifications" popoverList={[{"link":"/notification/1", "title":"This is the first notification"}]} element={notificationButton}></PopoverElement>
                     </Link></li>
 
-                    <li className="navbar-link"><Link to={'#'} className="navbar-brand">
+                    <li className="navbar-link"><Link to={'#'}>
                       <PopoverElement popoverTitle="What do you want to do?" popoverList={[{"link":"/profile", "title":"Profile"}, {"link":"/blog", "title":"Blog"}, {"link":"/logout", "title":"Log out"}]} element={userButton}></PopoverElement>
                     </Link></li>
                     
