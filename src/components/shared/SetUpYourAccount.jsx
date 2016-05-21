@@ -8,16 +8,51 @@ export default class SetUpYourAccount extends Component {
     return (
       <div>
         <div className="panel panel-default">
-          <div className="panel-heading">Set Up Your Account</div>
+          <div className="panel-heading"><h4>Set Up Your Account</h4></div>
           <div className="panel-body">
-            <ul className="list-group">
-              <li className="list-group-item">Visit your feed</li>
-              <li className="list-group-item">Follow 8 more topics</li>
-              <li className="list-group-item">Find your friends on Quora</li>
-              <li className="list-group-item">Upvote 5 more good answers</li>
-              <li className="list-group-item">Ask your first question</li>
-              <li className="list-group-item">Add info about what you know</li>
-              <li className="list-group-item">Answer a question</li>
+            <ul className="list-unstyled user-checklist">
+              <li>
+                <div className="check-wrapper complete">
+                  <span className="check"></span>
+                  <span className="check-text">Visit your feed</span>
+                </div>
+              </li>
+              <li>
+                <div className="check-wrapper">
+                  <span className="check"></span>
+                  <span className="check-text">Follow 8 more topics</span>
+                </div>
+              </li>
+              <li>
+                <div className="check-wrapper">
+                  <span className="check"></span>
+                  <span className="check-text">Find your friends on Quora</span>
+                </div>
+              </li>
+              <li>
+                <div className="check-wrapper">
+                  <span className="check"></span>
+                  <span className="check-text">Upvote 5 more good answers</span>
+                </div>
+              </li>
+              <li>
+                <div className="check-wrapper complete">
+                  <span className="check"></span>
+                  <span className="check-text">Ask your first question</span>
+                </div>
+              </li>
+              <li>
+                <div className="check-wrapper">
+                  <span className="check"></span>
+                  <span className="check-text">Add info about what you know</span>
+                </div>
+              </li>
+              <li>
+                <div className="check-wrapper complete">
+                  <span className="check"></span>
+                  <span className="check-text">Answer a question</span>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
