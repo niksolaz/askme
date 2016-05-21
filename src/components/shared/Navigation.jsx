@@ -3,7 +3,19 @@ import {Link} from 'react-router';
 import classnames from 'classnames';
 
 import SearchBar from './SearchBar.jsx';
+import PopoverElement from './PopoverElement.jsx';
 
+var notificationButton = (
+  <span className="glyphicon glyphicon-bell" aria-hidden="true"> 
+    Notification 
+  </span>
+);
+
+var userButton = (
+  <span className="glyphicon glyphicon-bell" aria-hidden="true"> 
+    User
+  </span>
+);
 export default class Navigation extends Component {
   
   render() {
@@ -27,14 +39,14 @@ export default class Navigation extends Component {
                       <span className="glyphicon glyphicon-pencil" aria-hidden="true"> Answers </span>
                     </Link></li>
 
-                    <li className="navbar-link"><Link to={'/Notification'}>
-                      <span className="glyphicon glyphicon-bell" aria-hidden="true"> Notification </span>
+                    <li className="navbar-link"><Link to={'#'}>
+                      <PopoverElement popoverTitle="See all the notifications" popoverList={[{"link":"/notification/1", "title":"This is the first notification"}]} element={notificationButton}></PopoverElement>
                     </Link></li>
 
-                    <li className="navbar-link"><Link to={'/User'} className="navbar-brand">
-                      <span className="glyphicon glyphicon-user" aria-hidden="true"> User </span>
+                    <li className="navbar-link"><Link to={'#'} className="navbar-brand">
+                      <PopoverElement popoverTitle="What do you want to do?" popoverList={[{"link":"/profile", "title":"Profile"}, {"link":"/blog", "title":"Blog"}, {"link":"/logout", "title":"Log out"}]} element={userButton}></PopoverElement>
                     </Link></li>
-
+                    
                 </ul>
             </div>
           </div>
