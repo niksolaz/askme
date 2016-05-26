@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 import classnames from 'classnames';
 
 export default class TredingNow extends Component {
-  
+
   render() {
     return (
       <div className="feeds">
@@ -25,11 +25,10 @@ export default class TredingNow extends Component {
             <li><Link to="/pinned/javascript">Paul Ryan / Trump conflict</Link></li>
             <li><Link to="/pinned/the-internet">Game of Thrones season 6 Episode 4</Link></li>
             <li><Link to="/pinned/science">Antigravity</Link></li>
-          </ul>   
-        </div>          
+          </ul>
+        </div>
       </div>
     );
   }
 
 }
-

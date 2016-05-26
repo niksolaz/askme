@@ -159,6 +159,28 @@ a:link, a:visited, a:hover, a:active{
     color: #aaa;
   }
   /**
+    Answer Item
+  **/
+  .AnswerItem {
+
+  }
+  .AnswerItem .Header{
+    font-size:14px;
+    color: black;
+  }
+  .AnswerItem .topic:before, .AnswerItem .topic:after{
+    content: " • "
+  }
+
+  /**
+    Answer Item List
+  **/
+  .AnswerItemList{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  /*
+  /**
     Feed Item
   **/
   .FeedItem {
@@ -424,6 +446,24 @@ a:link, a:visited, a:hover, a:active{
     position: absolute;
     width: 100%;
     z-index: 600;
+  }
+
+  .writingNow{
+
+  }
+  .writingNow .user{
+    padding-bottom: 20px;
+  }
+
+  .writingNow .view_answer a{
+    color:#aaa;
+    text-decoration: none;
+  }
+  .online{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #5ac351;
   }
 .react-toggle {
   display: inline-block;
