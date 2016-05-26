@@ -42,6 +42,13 @@ export function getQuestionStatuses(){
 	});
 }
 
+export function getCommentsStatuses(){
+	return new Promise((resolve, reject) => {
+		setTimeout(resolve.bind(null, commentsStatuses), 5000);
+	});
+}
+
+
 export function getAnswer(myId){
 	return new Promise((resolve, reject) => {
 		const message = _.find(Answers, {id: myId});
@@ -68,4 +75,16 @@ export function getQuestionStatus(myId){
 	});
 }
 
+export function getCommentStatus(myId){
+	return new Promise((resolve, reject) => {
+
+		const message = _.find(commentStatuses, {id:myId});
+		if (message){
+			resolve(message);
+		}else{
+			reject("Message not found");
+		}
+
+	});
+}
 
