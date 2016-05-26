@@ -8,7 +8,7 @@ export default class FeedList extends Component {
 	render(){
 		var el = (<FeedItem />);
 		return (
-			<div>
+			<div className="FeedListItem">
 				<FeedItem />
 			</div>
 		);

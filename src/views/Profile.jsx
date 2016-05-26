@@ -14,7 +14,7 @@ export default class Profile extends React.Component {
                 <Header  />
                 <UserProfile />
             </div>
-            );
+        );
     }
 }
 

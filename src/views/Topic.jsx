@@ -7,12 +7,12 @@ import BodyTopic from '../components/modules/BodyTopic.jsx';
 import {Link, PropTypes} from 'react-router';
 
 export default class Topic extends React.Component {
-    
+
      render() {
         return(
             <div className="container">
                 <Header  />
-                <HeaderTopic  />  
+                <HeaderTopic  />
                 <BodyTopic />   
             </div>
             );

@@ -3,50 +3,39 @@ import {Link} from 'react-router';
 import classnames from 'classnames';
 
 export default class NavTopic extends Component {
-  
+
   render() {
     return (
-      <div>
-        <div className="row">
-          <div className="col-xs-6 col-lg-4">
-            <div className="media">
-              <div className="media-left">
-                <a href="#">
-                  <img className="media-object" src="..." alt="..."/>
-                </a>
-              </div>
-              <div className="media-body">
-                <h4 className="media-heading">Apple Swift</h4>
-                (programming lenguage)
-              </div>
-            </div>
+      <div className="NavigationTopic">
+        <div className="row" style={{marginBottom:15}}>
+          <div className="col-xs-2">
+            <img className="img-circle" src="http://placehold.it/150x150" alt="..."/>
           </div>
-          <div className="col-xs-6 col-lg-4"></div>
-          <div className="col-xs-6 col-lg-4"></div>
+          <div className="col-xs-10">
+            <h1 className="title">Apple Swift</h1>
+            <div className="description">(Programming Language)</div>
+          </div>
         </div>
-        <nav className="navbar navbar-default">
-            <ul className="nav nav-pills">
-              <li role="presentation" className="disabled"><a href="#">Overview</a></li>
-              <li role="presentation" className="disabled"><a href="#">Topic FAQ</a></li>
-              <li role="presentation" className="disabled"><a href="#">Feed</a></li>
-              <li role="presentation" className="disabled"><a href="#">Most Viewed Writers</a></li>
-              <li role="presentation" className="disabled"><a href="#">Answer</a></li>
-              <li role="presentation" className="dropdown">
-                <a className="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                  ... <span className="caret"></span>
-                </a>
-                <ul className="dropdown-menu">
-                  <li>Share Topic</li>
-                  <li>Manage</li>
-                  <li>Monitor FAQ</li>
-                  <li>Report</li>
+        <div className="row">
+          <div className="col-xs-12">
+            <nav className="navbar navbar-default">
+                <ul className="nav nav-pills">
+                  <li><a href="#">Overview</a></li>
+                  <li><a href="#">Topic FAQ</a></li>
+                  <li><a href="#">Feed</a></li>
+                  <li><a href="#">Most Viewed Writers</a></li>
+                  <li><a href="#">Answer</a></li>
+                  <li>
+                    <div className="ActionBar">
+                      <button className="btn btn-primary primary_action">Follow Topic</button>
+                    </div>
+                  </li>
+
                 </ul>
-              </li>
-              <button className="btn btn-info" type="button">
-                Follow Topic <span className="badge">12.8K</span>
-              </button>
-            </ul>
-        </nav>
+            </nav>
+          </div>
+        </div>
+
       </div>
     );
   }

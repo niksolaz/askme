@@ -24,7 +24,7 @@ export default class Navigation extends Component {
           <div className="container-fluid">
             <div className="navbar-header">
               <Link to={'/'} className="navbar-brand">
-              <span className="logoMain">Ask Me</span>
+                <span className="logoMain">Ask Me</span>
               </Link>
             </div>
             <div className="collapse navbar-collapse" id="my-navbar">
