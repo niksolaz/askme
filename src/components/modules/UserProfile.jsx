@@ -8,7 +8,89 @@ export default class UserProfile extends Component {
     return (
     	<div className="Profile">
       	<div className="row">
+          <div className="col-xs-12">
+            <div className="CompleteProfile">
+              <div className="row">
+                <div className="col-xs-12">
+                  <h2 className="title">Nicola,  add details about what you know.</h2>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xs-6">
+                  <div className="CompleteProfileSection CompleteExpertise">
+                    <h4>Know about</h4>
+                    <hr />
+                    <div className="description">
+                      What topics do you know about?
+                    </div>
+                    <div className="AddTopicSelector Selector ProfileFeaturedTopicSelector TopicSelector">
+                      <div className="selector_input_interaction">
+                        <input className="selector_input text" placeholder="Add Topics" />
+                      </div>
+                    </div>
+                    <div className="selector_results_container hidden" style={{overflowY: "auto", height: "auto"}}>
 
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className="col-xs-6">
+                  <div className="CompleteProfileSection CompleteEmployment">
+                    <h4>Employment</h4>
+                    <hr />
+                    <div className="description">
+                      Where have you worked?Where do you currently live?
+                    </div>
+                    <div className="AddTopicSelector Selector ProfileFeaturedTopicSelector TopicSelector">
+                      <div className="selector_input_interaction">
+                        <input className="selector_input text" placeholder="Add Topics" />
+                      </div>
+                    </div>
+                    <div className="selector_results_container hidden" style={{overflowY: "auto", height: "auto"}}>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xs-6">
+                  <div className="CompleteProfileSection CompleteEducation">
+                    <h4>Education</h4>
+                    <hr />
+                    <div className="description">
+                      What have you studied?Where have you worked?
+                    </div>
+                    <div className="AddTopicSelector Selector ProfileFeaturedTopicSelector TopicSelector">
+                      <div className="selector_input_interaction">
+                        <input className="selector_input text" placeholder="Add Topics" />
+                      </div>
+                    </div>
+                    <div className="selector_results_container hidden" style={{overflowY: "auto", height: "auto"}}>
+
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xs-6">
+                  <div className="CompleteProfileSection CompleteLocation">
+                    <h4>Location</h4>
+                    <hr />
+                    <div className="description">
+                      Where do you currently live?
+                    </div>
+                    <div className="AddTopicSelector Selector ProfileFeaturedTopicSelector TopicSelector">
+                      <div className="selector_input_interaction">
+                        <input className="selector_input text" placeholder="Add Topics" />
+                      </div>
+                    </div>
+                    <div className="selector_results_container hidden" style={{overflowY: "auto", height: "auto"}}>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       	</div>
         <div className="row">
           <div className="col-xs-9">

@@ -7,12 +7,11 @@ import UserProfile from '../components/modules/UserProfile.jsx';
 import {Link, PropTypes} from 'react-router';
 
 export default class Profile extends React.Component {
-    
+
      render() {
         return(
             <div className="container">
                 <Header  />
-                <InfoProfile />
                 <UserProfile />
             </div>
             );
