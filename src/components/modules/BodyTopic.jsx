@@ -4,7 +4,8 @@ import TopicQuestions from '../shared/TopicQuestions.jsx';
 import FeedList from '../shared/FeedList.jsx';
 import TopicAbout from '../shared/TopicAbout.jsx';
 import MostViewedWriters from '../shared/MostViewedWriters.jsx';
-import AnswersMessageList from '../modules/AnswersMessageList.jsx';
+import TopicAnswers from '../shared/TopicAnswers.jsx';
+import RelatedTopics from '../shared/RelatedTopics.jsx';
 
 export default class BodyTopic extends Component {
   render() {
@@ -23,7 +24,8 @@ export default class BodyTopic extends Component {
         	<div className="col-xs-4">
         		<TopicAbout />
             <MostViewedWriters />
-            <AnswersMessageList />
+            <TopicAnswers />
+            <RelatedTopics />
         	</div>
         </div>
       </div>

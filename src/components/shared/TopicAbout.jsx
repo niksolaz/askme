@@ -6,10 +6,10 @@ export default class TopicAbout extends Component {
 
   render() {
     return (
-      <div className="TopicAbout">
+      <div className="TopicAbout" style={{marginBottom:30}}>
         <div className="row">
           <div className="col-xs-12">
-            About
+            <h4>About</h4>
             <p>Swift is an open source programming language<br/>
                developed by Apple.
             </p>
