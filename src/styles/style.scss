@@ -5,6 +5,18 @@ html{
 a:link, a:visited, a:hover, a:active{
   text-decoration: none;
 }
+
+.list-unstyled{
+  list-style: none;
+  padding-bottom:10px;
+}
+
+.list-unstyled li{
+  padding-bottom:5px;
+}
+.list-unstyled li a{
+  color:#333;
+}
 /**
   Logo Main
 **/
@@ -304,7 +316,46 @@ a:link, a:visited, a:hover, a:active{
   }
   .Profile .Bio a, .Profile .Description a{
     color:#aaa;
+  }
+  .Profile .answers{
+    margin: 20px;
+  }
+  .Profile .answers .no-answers{
+     margin: auto auto;
+  }
+  .Profile .answers .no-answers{
+    color: #aaa;
+  }
+  .Profile .box{
+    border-radius: 3px;
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+    border: 1px dashed #ccc;
+    padding: 16px;
+    text-align: center;
+    color: #666;
+    display: block;
+  }
+  .Profile .box .emptyBox{
 
+  }
+
+  .Profile .box .emptyBox .icon{
+    margin: 8px auto;
+    border-radius: 50%;
+    background: #aaa;
+    width: 35px;
+    height: 35px;
+    border: 1 px solid #aaa;
+  }
+
+  .Profile .box .emptyBox .icon .plus-icon{
+    width: 13px;
+    height: 13px;
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-image: url('//qsf.is.quoracdn.net/-images.icons.icon_follow_white.svg7ef62d72c48317bd.svg');
+    margin-top: 11px;
   }
 .react-toggle {
   display: inline-block;

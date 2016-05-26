@@ -38,23 +38,30 @@ export default class UserProfile extends Component {
               <div className="col-xs-3">
                 <h4>Feeds</h4>
                 <hr />
-                <ul>
-                  <li>Answers</li>
-                  <li>Questions</li>
-                  <li>Posts</li>
-                  <li>All Activity</li>
+                <ul className="list-unstyled">
+                  <li><a href="#">Answers</a></li>
+                  <li><a href="#">Questions</a></li>
+                  <li><a href="#">Posts</a></li>
+                  <li><a href="#">All Activity</a></li>
                 </ul>
-                <ul>
-                  <li>Followers</li>
-                  <li>Following</li>
-                  <li>Edits</li>
+                <ul className="list-unstyled">
+                  <li><a href="#">Followers</a></li>
+                  <li><a href="#">Following</a></li>
+                  <li><a href="#">Edits</a></li>
                 </ul>
               </div>
               <div className="col-xs-9">
                 <h4>Answers</h4>
                 <hr />
-                <span>You haven't written any answer yet</span>
-                <div>Answer your first question</div>
+                <div className="answers">
+                  <div className="no-answers">
+                    <div className="no-answers-text">You haven't written any answer yet</div>
+                    <div className="no-answers-question">
+                      <a href="/answers">Answer your first question</a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -63,6 +70,18 @@ export default class UserProfile extends Component {
               <div className="col-xs-12">
                 <h4>Answers View</h4>
                 <hr />
+                <div className="box">
+                  <div className="emptyBox">
+                    <div className="icon">
+                      <div className="plus-icon">
+                          
+                      </div>
+                    </div>
+                    <div className="message">
+
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="row">
