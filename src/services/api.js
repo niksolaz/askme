@@ -88,3 +88,15 @@ export function getCommentStatus(myId){
 	});
 }
 
+export function getUpvoteStatus(){
+	return new Promise((resolve, reject) =>{
+
+		const counter = 0;
+		if(counter){
+			resolve(counter++);
+		}else{
+			reject(alert("DO NOT UPVOTED"));
+		}
+	});
+}
+
