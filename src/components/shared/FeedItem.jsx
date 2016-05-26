@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 
 export default class FeedItem extends Component {
-
+	
 	render(){
 		return (
 			<div className="feedItem">

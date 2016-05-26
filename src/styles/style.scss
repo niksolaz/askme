@@ -2,7 +2,9 @@ html{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 15px;
 }
-
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+}
 /**
   Logo Main
 **/
@@ -289,6 +291,20 @@ html{
     background-image: url('//qsf.is.quoracdn.net/-images.icons.share_sprite.svg3375879931094cd8.svg');
     background-size: 32px 16px;
     font-size: 0;
+  }
+
+  .UserName .FirstName, .UserName .LastName{
+    font-weight: bold;
+    font-size:24px;
+    font-style: italic;
+  }
+  .Profile{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Profile .Bio a, .Profile .Description a{
+    color:#aaa;
+
   }
 .react-toggle {
   display: inline-block;
