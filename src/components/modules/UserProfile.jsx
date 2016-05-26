@@ -72,13 +72,8 @@ export default class UserProfile extends Component {
                 <hr />
                 <div className="box">
                   <div className="emptyBox">
-                    <div className="icon">
-                      <div className="plus-icon">
-                          
-                      </div>
-                    </div>
                     <div className="message">
-
+                      Start answering to unlock this section
                     </div>
                   </div>
                 </div>
@@ -88,12 +83,32 @@ export default class UserProfile extends Component {
               <div className="col-xs-12">
                 <h4>About Nicola</h4>
                 <hr />
+                <div className="box">
+                  <div className="emptyBox">
+                    <div className="icon">
+                      <div className="plus-icon"></div>
+                    </div>
+                    <div className="message">
+                      Where have you lived, worked and studied?
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="row">
               <div className="col-xs-12">
                 <h4>Knows about</h4>
                 <hr />
+                <div className="box">
+                  <div className="emptyBox">
+                    <div className="icon">
+                      <div className="plus-icon"></div>
+                    </div>
+                    <div className="message">
+                      What topic do you know about?
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
