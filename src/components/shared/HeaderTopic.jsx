@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router';
 import classnames from 'classnames';
 
-export default class NavTopic extends Component {
+export default class HeaderTopic extends Component {
 
   render() {
     return (
