@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import Answer from './Answer.jsx';
 
 export default class AnswersList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="AnswerItemList">
       	<div className="row">
-        	Answer your first question
+        	<Answer />
         </div>
       </div>
     );

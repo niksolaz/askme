@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 import classnames from 'classnames';
+import Upvote from 'react-upvote';
+
+
 
 export default class TopStoryForYou extends Component {
+
   
   render() {
     return (
@@ -72,7 +76,7 @@ export default class TopStoryForYou extends Component {
                 
                 
               <div className="ActionBar">
-                  <span className="DpvoteButton">
+                  <span className="UpvoteButton">
                     <button type="button" value="Upvote | 24" />
                   </span>
                   <span className="DownvoteButton">
@@ -81,6 +85,17 @@ export default class TopStoryForYou extends Component {
                   <span className="Comments">
                      <button type="button" value="Comments | 3" />
                   </span>
+                  <Upvote 
+                    voteStatus={ user.votes[postData.id] || 0 }
+                    upvoteContent={ <i className="upvote-icon fa fa-arrow-up"></i> }
+                    downvoteContent={ <i className="downvote-icon fa fa-arrow-down"></i> }
+                    afterContent={ <span className="upvote-count">example</span> }
+                    shouldAllow={ () => user.isLoggedIn }
+                    onDisallowed={ () => this.errorMessage('You have to log in!') }
+                    onUpvote={ () => this.upvotePost(postData.id) }
+                    onDownvote={ () => this.downvotePost(postData.id) }
+                    onRemoveVote={ () => this.removeVote(postData.id) }
+                  />
               </div>
           </div>
           </div>

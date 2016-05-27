@@ -3,10 +3,10 @@ import {Link} from 'react-router';
 import classnames from 'classnames';
 
 export default class Feeds extends Component {
-  
+
   render() {
     return (
-      <div className="feeds">
+      <div className="Feeds">
         <div className="row">
           <div className="col-xs-4">
             <span style={{fontWeight:'bold'}}>Feeds</span>
@@ -19,14 +19,14 @@ export default class Feeds extends Component {
           <hr style={{marginTop:0, marginBottom:5}}/>
         </div>
         <div className="row">
-          <ul className="feed-list">
+          <ul className="FeedList">
             <li><Link to="/pinned/mobile-applications">Mobile Applications</Link></li>
             <li><Link to="/pinned/technology-startups">Technology Startups</Link></li>
             <li><Link to="/pinned/javascript">JavaScript (programming language)</Link></li>
             <li><Link to="/pinned/the-internet">The internet</Link></li>
             <li><Link to="/pinned/science">Science</Link></li>
-          </ul>   
-        </div>         	
+          </ul>
+        </div>
       </div>
     );
   }
