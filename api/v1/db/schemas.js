@@ -3,8 +3,8 @@ var r = thinky.r;
 var type   = thinky.type;
 
 console.log("Creating the models.....");
-var User = thinky.createModel("User", {
-  id: type.string(),      // a normal string
+var Users = thinky.createModel("Users", {
+  id: type.string().uuid(5),      // a normal string
   firstname: type.string(),  // a string of at least two characters
   lastname: type.string(),
   bio: type.string(),
@@ -25,15 +25,15 @@ var User = thinky.createModel("User", {
 });
 
 
-var Topic = thinky.createModel("Topic", {
-  id: type.string(),      // a normal string
+var Topics = thinky.createModel("Topics", {
+  id: type.string().uuid(5),      // a normal string
   name: type.string(),  // a string of at least two characters
   description : type.string(),
   createdAt: type.date().default(r.now())
 });
 
-var Question = thinky.createModel("Question", {
-  id: type.string(),      // a normal string
+var Questions = thinky.createModel("Questions", {
+  id: type.string().uuid(5),      // a normal string
   question: type.string(),  // a string of at least two characters
   authorId: type.string(), // Author
   topicId: type.string(),
@@ -41,8 +41,8 @@ var Question = thinky.createModel("Question", {
   updatedAt: type.date().default(r.now())
 });
 
-var Answer = thinky.createModel("Answer", {
-  id: type.string(),      // a normal string
+var Answers = thinky.createModel("Answers", {
+  id: type.string().uuid(5),      // a normal string
   answer: type.string(),  // a string of at least two characters
   authorId: type.string(), // Author
   questionId: type.string(), // Question
@@ -50,20 +50,30 @@ var Answer = thinky.createModel("Answer", {
   updatedAt: type.date().default(r.now())
 });
 
-var Notification = thinky.createModel("Notification", {
-  id: type.string(),      // a normal string
-  question: type.string(),  // a string of at least two characters
+var Notifications = thinky.createModel("Notifications", {
+  id: type.string().uuid(5),      // a normal string
+  notification: type.string(),  // a string of at least two characters
+  userId: type.string(),
   createdAt: type.date().default(r.now()),
   updatedAt: type.date().default(r.now())
 });
 
 console.log("Creating the relationship....");
+
 // User relationship
-User.hasMany(Question, "questions", "id", "authorId")
-User.hasMany(Answer, "answers", "id", "authorId")
+Users.hasMany(Questions, "questions", "id", "authorId")
+Users.hasMany(Answers, "answers", "id", "authorId")
 
 // Questions
-Question.hasMany(Answer, "answers", "id", "questionId")
-Question.hasOne(Topic, "topic", "id", "topicId")
+Questions.hasOne(Topics, "topic", "id", "topicId")
+Questions.belongsTo(Users, "author", "authorId", "id")
+Questions.hasMany(Answers, "answers", "id", "questionId")
+
+// Answers
+Answers.belongsTo(Users, "author", "authorId", "id")
+Answers.belongsTo(Questions, "question", "questionId", "id")
+
+// Notification
+Notifications.belongsTo(Users, "user", "userId", "id")
 
 console.log("Finished creating the database...")
