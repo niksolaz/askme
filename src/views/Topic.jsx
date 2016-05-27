@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 
 import Header from '../components/modules/Header.jsx';
-import HeaderTopic from '../components/modules/HeaderTopic.jsx';
 import BodyTopic from '../components/modules/BodyTopic.jsx';
 import TopicQuestions from '../components/shared/TopicQuestions.jsx';
 import FeedList from '../components/shared/FeedList.jsx';
@@ -36,7 +35,7 @@ export default class Topic extends React.Component {
          </div>
        );
      }
-     
+
      render() {
         var pageBody = this.createPageBody();
 
