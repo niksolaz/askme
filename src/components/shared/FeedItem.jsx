@@ -4,10 +4,10 @@ import classnames from 'classnames';
 
 
 export default class FeedItem extends Component {
-	
+
 	render(){
 		return (
-			<div className="feedItem">
+			<div className="FeedItem">
 				<div className="row">
 					<div className="col-xs-12">
 						<span className="prefix">Answer written</span>
@@ -73,7 +73,7 @@ export default class FeedItem extends Component {
 		        <div className="ActionBar">
 		        	<div className="row">
 		        		<div className="col-xs-2">
-		        			<button className="btn btn-primary primary_action" type="button">
+		        			<button className="btn btn-primary PrimaryAction" type="button">
 										<span>Upvote</span>
 										<span className="count"> 9</span>
 									</button>

@@ -6,10 +6,10 @@ export default class TredingNow extends Component {
 
   render() {
     return (
-      <div className="feeds">
+      <div className="TrendingNow">
         <div className="row">
           <div className="col-xs-8">
-            <span className="trending-list-icon"></span><span style={{fontWeight:'bold'}}>Trending now</span>
+            <span className="Icon"></span><span style={{fontWeight:'bold'}}>Trending now</span>
           </div>
           <div className="col-xs-3">
             <span style={{fontWeight:'bold'}}>Edit</span>
@@ -19,7 +19,7 @@ export default class TredingNow extends Component {
           <hr style={{marginTop:0, marginBottom:5}}/>
         </div>
         <div className="row">
-          <ul className="feed-list">
+          <ul className="FeedList">
             <li><Link to="/pinned/mobile-applications">Vivi Al Debuts</Link></li>
             <li><Link to="/pinned/technology-startups">Trump Goes After Amazon</Link></li>
             <li><Link to="/pinned/javascript">Paul Ryan / Trump conflict</Link></li>

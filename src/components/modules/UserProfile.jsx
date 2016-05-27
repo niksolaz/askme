@@ -112,7 +112,7 @@ export default class UserProfile extends Component {
                   <a href="#">Add user description</a>
                 </div>
                 <div className="Followers ActionBar">
-                  <button className="btn btn-primary  primary_action" type="button" value="Followers">Followers</button>
+                  <button className="btn btn-primary  PrimaryAction" type="button" value="Followers">Followers</button>
                 </div>
               </div>
             </div>
