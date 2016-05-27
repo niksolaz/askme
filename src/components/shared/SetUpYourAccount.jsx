@@ -3,14 +3,14 @@ import {Link} from 'react-router';
 import classnames from 'classnames';
 
 export default class SetUpYourAccount extends Component {
-  
+
   render() {
     return (
-      <div>
+      <div className="SetUpYourAccount">
         <div className="panel panel-default">
           <div className="panel-heading"><h4>Set Up Your Account</h4></div>
           <div className="panel-body">
-            <ul className="list-unstyled user-checklist">
+            <ul className="list-unstyled UserChecklist">
               <li>
                 <div className="check-wrapper complete">
                   <span className="check"></span>
