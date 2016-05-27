@@ -7,7 +7,8 @@
     "postinstall": "npm run build",
     "start": "node start.js",
     "lint": "eslint src",
-    "develop": "node server.js"
+    "develop": "node server.js",
+    "start-api": "node api/index.js"
   },
   "repository": {
     "type": "git",
@@ -68,7 +69,9 @@
     "react-router": "^1.0.0",
     "react-toggle": "^2.0.1",
     "redux": "^3.0.4",
-    "redux-thunk": "^1.0.0"
+    "redux-thunk": "^1.0.0",
+    "rethinkdb": "^2.3.1",
+    "thinky": "^2.3.2"
   },
   "babel": {
     "presets": [
