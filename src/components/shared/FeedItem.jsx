@@ -7,7 +7,7 @@ export default class FeedItem extends Component {
 
 	render(){
 		return (
-			<div className="feedItem">
+			<div className="FeedItem">
 				<div className="row">
 					<div className="col-xs-12">
 						<span className="prefix">Answer written</span>
@@ -30,7 +30,7 @@ export default class FeedItem extends Component {
 	        					<img src="http://placehold.it/50x50"  className="img-circle"/>
 	        				</div>
 	        				<div className="col-xs-11">
-	        					<div className="UserInfo">
+	        					<div className="UserCredibility">
 		                          <div className="Username">
 		                            Glenn Anderson, May never pass a Turing test.
 		                          </div>
@@ -47,12 +47,12 @@ export default class FeedItem extends Component {
 	        		<div className="row">
 	        			<div className="answer-content">
 	        				<div className="col-xs-12">
-	        					Some people dislike Node.js because it is JavaScript. There are some programmers who see JavaScript's roots as a scripting language designed to add a 
-		                          little interactivity to a web site as what it is today. Others look at things like dynamic typing, prototypal inheritance, and general quirkiness and just can't 
-		                          understand how it can be tolerated. Some people are sick of the hype, and wonder why similar solutions 
-		                          in other languages, 
+	        					Some people dislike Node.js because it is JavaScript. There are some programmers who see JavaScript's roots as a scripting language designed to add a
+		                          little interactivity to a web site as what it is today. Others look at things like dynamic typing, prototypal inheritance, and general quirkiness and just can't
+		                          understand how it can be tolerated. Some people are sick of the hype, and wonder why similar solutions
+		                          in other languages,
 		                          for example Tornado in Python are not given as much attention.
-		                          Node.js was pretty much an instant hit when it was introduced. Despite its quirks JavaScript is an immensely popular language, with a horde of developers already familiar with it. 
+		                          Node.js was pretty much an instant hit when it was introduced. Despite its quirks JavaScript is an immensely popular language, with a horde of developers already familiar with it.
 		                        It has a very active developer community.
 		                          So, Node.js is hated by some developers because it is JavaScript and seen as an inferior choice to other solutions.
 	        				</div>
@@ -61,27 +61,56 @@ export default class FeedItem extends Component {
 		        </div>
 		        <div className="footer">
 		        	<div className="row">
-		        		<div className="footer-text">
-		        			Written Apr 30 = View Upvotes
-		        		</div>
+		        		<div className="col-xs-12">
+									<div className="ContentFooter">
+										<a href="#"><span>Written Apr 30</span></a> •
+										<a href="#"><span>View Upvotes</span></a> •
+										<a href="#"><span>Answer requested by 3 persons</span></a>
+									</div>
+								</div>
 		        	</div>
 		        </div>
-		        <div className="action-bar">
+		        <div className="ActionBar">
 		        	<div className="row">
 		        		<div className="col-xs-2">
-		        			<button className="btn btn-primary" type="button">Upvote</button>
+		        			<button className="btn btn-primary PrimaryAction" type="button">
+										<span>Upvote</span>
+										<span className="count"> 9</span>
+									</button>
 		        		</div>
 		        		<div className="col-xs-2">
-		        			<button className="btn btn-primary" type="button">Downvote</button>
+		        			<a className="second_action" href="/downvote">
+										<span>Downvote</span>
+									</a>
 		        		</div>
 		        		<div className="col-xs-2">
-		        			<button className="btn btn-primary" type="button">Comments</button>
+		        			<a className="second_action" href="/comment">
+										<span>
+										Comments
+										</span>
+									</a>
 		        		</div>
-		        		<div className="col-xs-6"></div>
+		        		<div className="col-xs-1 col-xs-offset-3">
+									<div className="action_item">
+										<div className="ShareSectionIcons">
+											<a className="FacebookNetworkShare">
+												<span className="icon icon_facebook"></span>
+											</a>
+											<a className="TwitterNetworkShare">
+												<span className="icon icon_twitter"></span>
+											</a>
+											<a className="TwitterNetworkShare">
+												<span className="icon icon_twitter"></span>
+											</a>
+											<a className="AnswerQuickShare">
+
+											</a>
+										</div>
+									</div>
+								</div>
 		        	</div>
 		        </div>
 			</div>
 		);
 	}
 }
-

@@ -1,3 +1,464 @@
+html{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+}
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+}
+
+.list-unstyled{
+  list-style: none;
+  padding-bottom:10px;
+}
+
+.list-unstyled li{
+  padding-bottom:5px;
+}
+.list-unstyled li a{
+  color:#333;
+}
+/**
+  Logo Main
+**/
+.logoMain {
+  font-family: 'Lobster', cursive;
+  color: #ec4b4d;
+  font-size: 24px;
+}
+
+/**
+  Navbar
+**/
+.navbar-default .navbar-nav > .active > a{
+   color: #ec4b4d;
+
+ }
+ .navbar-default .navbar-nav > .active > a > span{
+    font-weight: bold;
+ }
+
+ .navbar-nav>li> .profile-image {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+
+  /**
+    List
+  **/
+
+  ul.FeedList {
+      list-style: none;
+      padding:0;
+      margin:0;
+  }
+
+  ul.FeedList li {
+      padding-left: 1em;
+      text-indent: -.7em;
+      padding-top:10px;
+      padding-bottom:10px;
+  }
+
+  ul.FeedList li:before {
+      content: "• ";
+      color: #2b6dad;
+  }
+  ul.FeedList li a{
+    color: black;
+    text-decoration: none;
+
+  }
+
+  ul.FeedList li a:hover{
+    color: #2b6dad;
+    text-decoration: none;
+  }
+
+  .panel-default > .panel-heading{
+    background-color: #fafafa;
+    background-image:none;
+  }
+
+  /**
+    Feeds
+  **/
+  .Feeds{
+    margin-top:5px;
+    margin-bottom: 100px;
+  }
+
+  /**
+    Trending list
+  **/
+  .TrendingNow .Icon{
+    float: left;
+    margin-left: -15px;
+    margin-top: 6px;
+    margin-right: 5px;
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background-size: 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('//qsf.is.quoracdn.net/-images.icons.trending_purple.svg04e4dc8e95b1db50.svg')
+  }
+
+  /**
+    Setup your account now
+  **/
+  ul.UserChecklist {
+      list-style: none;
+      padding:0;
+      margin:0;
+  }
+
+  ul.UserChecklist li {
+      padding-left: 1em;
+      text-indent: -.7em;
+      padding-top:10px;
+      padding-bottom:10px;
+  }
+
+  .UserChecklist .check-text{
+    padding-left: 5px;
+  }
+
+  .UserChecklist .check-wrapper .check{
+    background-image: url('//qsf.is.quoracdn.net/-images.icons.green_check.svgf163a6ceb3479173.svg');
+    border: 0;
+    display:inline-block;
+    background-color: #fff;
+    opacity: .2;
+    width: 14px;
+    height: 13px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .UserChecklist .check-wrapper.complete .check{
+    opacity: 1;
+  }
+
+  .UserChecklist .check-wrapper.complete .check-text{
+    text-decoration: line-through;
+    opacity:.5;
+  }
+  .answer .row{
+      margin-bottom:10px;
+  }
+
+  .UserCredibility{
+    font-size:13px;
+    color: #aaa;
+  }
+  /**
+    Answer Item
+  **/
+  .AnswerItem {
+
+  }
+  .AnswerItem .Header{
+    font-size:14px;
+    color: black;
+  }
+  .AnswerItem .topic:before, .AnswerItem .topic:after{
+    content: " • "
+  }
+
+  /**
+    Answer Item List
+  **/
+  .AnswerItemList{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  /*
+  /**
+    Feed Item
+  **/
+  .FeedItem {
+
+  }
+  .FeedItem .Header{
+    font-size:14px;
+    color: black;
+  }
+  .FeedItem .topic:before, .FeedItem .topic:after{
+    content: " • "
+  }
+
+  /**
+    Feed Item List
+  **/
+  .FeedItemList{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  /**
+  Content Footer
+  **/
+  .ContentFooter{
+    padding-top: 8px;
+    font-size: 13px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  .ContentFooter a, .ContentFooter span{
+    color: #aaa;
+  }
+
+  /**
+    Action bar
+  **/
+  .ActionBar{
+    font-size: 13px;
+    margin-bottom: -16px;
+    padding: 8px 0 16px;
+    bottom: 0;
+    clear: left;
+  }
+  .ActionBar .PrimaryAction{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: opacity ease-in-out 100ms,color ease-in-out 100ms,background-color ease-in-out 100ms,border-color ease-in-out 100ms;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(200,200,200,0.2);
+    display: inline-block;
+    font-weight: 500;
+    outline: 0;
+    padding: 3px 7px 4px 7px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: #f1f8fb;
+    color: #2b6dad;
+    border: 1px solid #bbcadc;
+    float: left;
+  }
+  .count{
+    -webkit-font-smoothing: antialiased;
+    border-radius: 2px;
+    background: #eee;
+    color: #999;
+    font-weight: bold;
+    min-width: 10px;
+    padding: 2px 3px;
+    margin-left: 4px;
+    text-align: center;
+    display: inline-block;
+    float: none;
+  }
+  .PrimaryAction .count{
+    color:#2b6dad;
+    background: 0;
+    padding: 0;
+    margin: 0;
+    margin-left: 6px;
+    padding-left: 6px;
+    transition: opacity ease-in-out 100ms,color ease-in-out 100ms,background-color ease-in-out 100ms,border-color ease-in-out 100ms;
+    position: relative;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .PrimaryAction .count::before {
+      content: "";
+      transition: opacity ease-in-out 100ms,color ease-in-out 100ms,background-color ease-in-out 100ms,border-color ease-in-out 100ms;
+      width: 1px;
+      height: 14.5px;
+      position: absolute;
+      left: 0;
+      top: 2px;
+  }
+  .ActionBar .second_action{
+    display: inline-block;
+    margin: 0;
+    padding: 5px 0 4px;
+    color: #999;
+    background: 0;
+    font-weight: 400;
+  }
+  .ActionBar .action_item {
+    float: left;
+    margin-right: 12px;
+  }
+
+  .ActionBar .ShareSectionIcons a {
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 32px;
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  .ActionBar .ShareSectionIcons .FacebookNetworkShare{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: 32px 16px;
+    background-image: url('//qsf.is.quoracdn.net/-images.icons.facebook_sprite.svg5e6bae51f494a580.svg');
+    right: 84px;
+  }
+
+  .ActionBar .ShareSectionIcons .TwitterNetworkShare {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-size: 32px 16px;
+      background-image: url('//qsf.is.quoracdn.net/-images.icons.twitter_sprite.svg81a872448e81367f.svg');
+      right: 58px;
+  }
+  .ActionBar .ShareSectionIcons .AnswerQuickShare {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('//qsf.is.quoracdn.net/-images.icons.share_sprite.svg3375879931094cd8.svg');
+    background-size: 32px 16px;
+    font-size: 0;
+  }
+
+  .UserName .FirstName, .UserName .LastName{
+    font-weight: bold;
+    font-size:24px;
+    font-style: italic;
+  }
+  .Profile{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Profile .Bio a, .Profile .Description a{
+    color:#aaa;
+  }
+  .Profile .answers{
+    margin: 20px;
+  }
+  .Profile .answers .no-answers{
+     margin: auto auto;
+  }
+  .Profile .answers .no-answers{
+    color: #aaa;
+  }
+  .Profile .box{
+    border-radius: 3px;
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+    border: 1px dashed #ccc;
+    padding: 16px;
+    text-align: center;
+    color: #666;
+    display: block;
+  }
+  .Profile .box .emptyBox{
+
+  }
+
+  .Profile .box .emptyBox .icon{
+    margin: 8px auto;
+    border-radius: 50%;
+    background: #aaa;
+    width: 35px;
+    height: 35px;
+    border: 1 px solid #aaa;
+  }
+
+  .Profile .box .emptyBox .icon .plus-icon{
+    display:inline-block;
+    width: 13px;
+    height: 13px;
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-image: url('//qsf.is.quoracdn.net/-images.icons.icon_follow_white.svg7ef62d72c48317bd.svg');
+    margin-top: 11px;
+  }
+
+  .Profile .CompleteProfile{
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+    border: 1px dashed #ccc;
+    padding: 0;
+    margin-bottom: 32px;
+    float: left;
+    width: 100%;
+  }
+
+  .Profile .CompleteProfile h2.title{
+    margin: 8px 16px;
+    font-size: 19px;
+  }
+
+  .Profile .CompleteProfile .CompleteProfileSection{
+    background: #fff;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+  }
+
+  .CompleteProfileSection .CompleteExpertise{
+    float: left;
+    width: 458px;
+    margin: 0 8px 16px 16px;
+  }
+  .CompleteProfileBanner .CompleteProfileSection h4 {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 8px;
+  }
+  .Selector {
+    font-size: 13px;
+    position: relative;
+  }
+
+  .TopicSelector {
+    max-width: 175px;
+  }
+
+  .Selector .selector_input_interaction {
+    position: relative;
+    width: 100%;
+  }
+  .Selector .selector_input_interaction .selector_input {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    padding-right: 23px;
+  }
+  .Selector .selector_results_container {
+    position: absolute;
+    width: 100%;
+    z-index: 600;
+  }
+
+  .writingNow{
+
+  }
+  .writingNow .user{
+    padding-bottom: 20px;
+  }
+
+  .writingNow .view_answer a{
+    color:#aaa;
+    text-decoration: none;
+  }
+  .online{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #5ac351;
+  }
 .react-toggle {
   display: inline-block;
   position: relative;

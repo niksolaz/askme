@@ -9,7 +9,7 @@ import EmploymentProfile from '../shared/EmploymentProfile.jsx';
 export default class InfoProfile extends Component {
   render() {
     return (
-      <div>
+      <div className="CompleteProfile">
       		<div className="row">
 	        	<div>
 	        		<div className="col-md-2"></div>
