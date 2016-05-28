@@ -3,7 +3,7 @@ var r = thinky.r;
 var type   = thinky.type;
 
 console.log("Creating the models.....");
-var Users = thinky.createModel("Users", {
+var User = thinky.createModel("Users", {
   id: type.string().uuid(5),      // a normal string
   firstname: type.string(),  // a string of at least two characters
   lastname: type.string(),
@@ -25,32 +25,34 @@ var Users = thinky.createModel("Users", {
 });
 
 
-var Topics = thinky.createModel("Topics", {
+var Topic = thinky.createModel("Topics", {
   id: type.string().uuid(5),      // a normal string
   name: type.string(),  // a string of at least two characters
   description : type.string(),
   createdAt: type.date().default(r.now())
 });
 
-var Questions = thinky.createModel("Questions", {
+var Question = thinky.createModel("Questions", {
   id: type.string().uuid(5),      // a normal string
   question: type.string(),  // a string of at least two characters
   authorId: type.string(), // Author
   topicId: type.string(),
+  upvotes: type.number(),
   createdAt: type.date().default(r.now()),
   updatedAt: type.date().default(r.now())
 });
 
-var Answers = thinky.createModel("Answers", {
+var Answer = thinky.createModel("Answers", {
   id: type.string().uuid(5),      // a normal string
   answer: type.string(),  // a string of at least two characters
   authorId: type.string(), // Author
   questionId: type.string(), // Question
+  upvotes: type.number(),
   createdAt: type.date().default(r.now()),
   updatedAt: type.date().default(r.now())
 });
 
-var Notifications = thinky.createModel("Notifications", {
+var Notification = thinky.createModel("Notifications", {
   id: type.string().uuid(5),      // a normal string
   notification: type.string(),  // a string of at least two characters
   userId: type.string(),
@@ -61,19 +63,72 @@ var Notifications = thinky.createModel("Notifications", {
 console.log("Creating the relationship....");
 
 // User relationship
-Users.hasMany(Questions, "questions", "id", "authorId")
-Users.hasMany(Answers, "answers", "id", "authorId")
+User.hasMany(Question, "questions", "id", "authorId")
+User.hasMany(Answer, "answers", "id", "authorId")
 
 // Questions
-Questions.hasOne(Topics, "topic", "id", "topicId")
-Questions.belongsTo(Users, "author", "authorId", "id")
-Questions.hasMany(Answers, "answers", "id", "questionId")
+Question.hasOne(Topic, "topic", "id", "topicId")
+Question.belongsTo(User, "author", "authorId", "id")
+Question.hasMany(Answer, "answers", "id", "questionId")
 
 // Answers
-Answers.belongsTo(Users, "author", "authorId", "id")
-Answers.belongsTo(Questions, "question", "questionId", "id")
+Answer.belongsTo(User, "author", "authorId", "id")
+Answer.belongsTo(Question, "question", "questionId", "id")
 
 // Notification
-Notifications.belongsTo(Users, "user", "userId", "id")
+Notification.belongsTo(User, "user", "userId", "id")
 
 console.log("Finished creating the database...")
+
+console.log("Adding users");
+// Users
+var user1 = new User({
+    id: r.uuid(),
+    firstname: "Nicola",
+    lastname: "S.",
+    bio: "My personal bio",
+    description: "My personal description",
+    email: "nicola@example.com",
+    topic: [{"name": "Javascript"}, {"name": "Python"}],
+    education: [{"name": "School 1"}, {"name": "School 2"}],
+    location: "Asti",
+    employments: ["Employment 1", "Employment 2"]
+})
+
+
+var user2 = new User({
+    id: r.uuid(),
+    firstname: "Robert",
+    lastname: "R.",
+    bio: "My personal bio",
+    description: "My personal description",
+    email: "nicola@example.com",
+    topic: [{"name": "Javascript"}, {"name": "Python"}],
+    education: [{"name": "School 1"}, {"name": "School 2"}],
+    location: "Asti",
+    employments: ["Employment 1", "Employment 2"]
+});
+
+var user3 = new User({
+    id: r.uuid(),
+    firstname: "Frank",
+    lastname: "R.",
+    bio: "My personal bio",
+    description: "My personal description",
+    email: "nicola@example.com",
+    topic: [{"name": "Javascript"}, {"name": "Python"}],
+    education: [{"name": "School 1"}, {"name": "School 2"}],
+    location: "Asti",
+    employments: ["Employment 1", "Employment 2"]
+});
+User.save([user1, user2, user3])
+.then(function(result){
+  console.log("Users have been saved..", result)
+})
+.error(function(error){
+  console.error("Error saving the users", error)
+})
+
+module.exports = {
+  "User": User
+}

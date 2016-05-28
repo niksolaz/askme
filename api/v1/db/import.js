@@ -55,6 +55,9 @@ var topic3 = new Topic({
   description: "All about entrepreneurship"
 })
 
+var answer = new Question({ answer: "Clousure is...."})
+answer.author = user2
+
 var question = new Question({ question: "What is clousure in Javascript?"});
 question.topic = topic1
 question.author = user
@@ -64,6 +67,7 @@ var Question = thinky.createModel("Question", {
   question: type.string(),  // a string of at least two characters
   authorId: type.string(), // Author
   topicId: type.string(),
+  upvote: type.string(),
   createdAt: type.date().default(r.now()),
   updatedAt: type.date().default(r.now())
 });

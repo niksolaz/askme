@@ -1,8 +1,9 @@
-require('./db');
+var models = require('./db');
+console.log("MODELS", models);
 
 module.exports = function(router){
   var routes =  {
-    "users": require('./users')(router),
+    "users": require('./users')(models.User, router),
     "notifications": require('./notifications')(router),
     "auth": require('./auth')(router),
     "answers": require('./answers')(router),
