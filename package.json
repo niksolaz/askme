@@ -8,7 +8,8 @@
     "start": "node start.js",
     "lint": "eslint src",
     "develop": "node server.js",
-    "start-api": "node api/index.js"
+    "start-api": "node api/index.js",
+    "import-db": "node api/v1/db/import.js"
   },
   "repository": {
     "type": "git",

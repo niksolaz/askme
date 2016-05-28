@@ -22,5 +22,22 @@ module.exports = function(model, router) {
         })
     });
 
+    router.get('/questions/:questionId/upvote', function(req, res){
+      var questionId = req.params.questionId;
+      model.get(questionId).run()
+      .then(function(question){
+        question.upvotes++;
+        question.save().then(function(updatedQuestion){
+          res.json({
+            updated:updatedQuestion,
+            old: question
+          });
+        })
+
+      })
+      .catch(function(error){
+        res.json(error)
+      })
+    });
     return router;
 }
