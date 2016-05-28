@@ -1,5 +1,5 @@
 import _ from 'lodash';
-
+var url = process.env.API_URL;
 const answers = [
 	{
 		id:"1",
@@ -101,3 +101,12 @@ export function getUpvoteStatus(){
 	});
 }
 
+export function upvoteAnswer(answerId){
+	// It returns a javascript promise
+	return axios({
+		url: `${url}\answers\${answerId}\upvote`,
+		timeout: 20000,
+		method: 'get',
+		responseType: 'json'
+	})
+}

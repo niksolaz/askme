@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 import classnames from 'classnames';
+import {upvoteAnswer} from '../../actions/answerCreator.js';
 
 
-export default class Answer extends Component {
+class Answer extends Component {
+	// Upvote an answer
+	upvoteAnswer(){
+		var answerId = this.props.id; // It comes from redux
+		this.props.upvote(answerId); // It comes from redux;
 
+	}
 	render(){
+
 		return (
 			<div className="AnswerItem">
 				<div className="row">
@@ -34,8 +41,8 @@ export default class Answer extends Component {
         <div className="ActionBar">
         	<div className="row">
         		<div className="col-xs-2">
-        			<button className="btn btn-primary primary_action" type="button">
-								<span>Answer</span>
+        			<button className="btn btn-primary primary_action" type="button" onClick={this.upvoteAnswer}>
+								<span>Upvote</span>
 							</button>
         		</div>
         		<div className="col-xs-2">
@@ -74,3 +81,24 @@ export default class Answer extends Component {
 		);
 	}
 }
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+		id: state.answer.id
+	}
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    upvote: (id) => {
+      upvoteAnswer(id);
+    }
+  }
+}
+
+Answer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Answer)
+
+export default Answer

@@ -4,12 +4,15 @@ import {
 	GET_ANSWERS_MESSAGES_ERROR,
 	GET_ANSWERS_MESSAGE_PENDING,
 	GET_ANSWERS_MESSAGE_SUCCESS,
-	GET_ANSWERS_MESSAGE_ERROR
+	GET_ANSWERS_MESSAGE_ERROR,
+	UPVOTE_ANSWERS_PENDING,
+	UPVOTE_ANSWERS_SUCCESS,
+	UPVOTE_ANSWERS_ERROR
 } from './actionTypes';
 
 import  * as dataService from '../services/api'
 
-/** 
+/**
  Actions
 */
 function getAnswersPending(){
@@ -56,6 +59,26 @@ function getAnswersMessageSuccess(message){
 	}
 }
 
+function upvoteAnswersPending(){
+	return {
+		type: UPVOTE_ANSWERS_PENDING,
+	}
+}
+
+function upvoteAnswersError(error){
+	return {
+		type: UPVOTE_ANSWERS_ERROR,
+		error
+	}
+}
+
+function upvoteAnswersSuccess(answer){
+	return {
+		type: UPVOTE_ANSWERS_SUCCESS,
+		answer
+	}
+}
+
 /**
  Actions used from the view
 */
@@ -76,4 +99,15 @@ export function getAnswer(id){
 			.then((message) => dispatch(getAnswersMessageSuccess(message)))
 			.catch((error) => dispatch(getAnswersMessageError(error)))
 	};
+}
+
+export function upvoteAnswer(id){
+	return (dispatch, getState) =>{
+		dispatch(upvoteAnswersPending());
+		dataService.upvoteAnswer(id)
+		.then((message) => {
+			dispatch(upvoteAnswersSuccess(message.updated)
+		}))
+		.catch((error) => dispatch(upvoteAnswersError(error)))
+	}
 }
