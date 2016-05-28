@@ -1,17 +1,16 @@
 var models = require('./db');
-console.log("MODELS", models);
 
 module.exports = function(router){
   var routes =  {
     "users": require('./users')(models.User, router),
-    "notifications": require('./notifications')(router),
-    "auth": require('./auth')(router),
-    "answers": require('./answers')(router),
-    "questions": require('./questions')(router),
-    "search": require('./search')(router),
-    "topics": require('./topics')(router),
-    "trending": require('./trending')(router),
-    "live": require('./live')(router)
+    "notifications": require('./notifications')(models.Notification, router), // Not implemented yet
+    "auth": require('./auth')(models.Auth, router), // Not implemented yet
+    "answers": require('./answers')(models.Answer, router),
+    "questions": require('./questions')(models.Question, router),
+    "search": require('./search')(models, router), // Not implemented yet
+    "topics": require('./topics')(models.Topic, router),
+    "trending": require('./trending')(models, router), // Not implemented yet
+    "live": require('./live')(models, router) // Not implemented yet
   }
   return router;
 }

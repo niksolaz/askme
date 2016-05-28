@@ -1,4 +1,4 @@
-module.exports = function(router) {
+module.exports = function(model, router) {
     router.get('/live', function(req, res) {
         console.log("writing now.....")
         res.json({"live": []})

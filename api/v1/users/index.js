@@ -17,10 +17,13 @@ module.exports = function(model, router) {
 
     router.get('/users/:userId', function(req, res) {
         var userId = req.params.userId;
-        var user = {
-          id: userId
-        }
-        res.json(user)
+        model.get(userId).run()
+        .then(function(result){
+          res.json(result)
+        })
+        .catch(function(error){
+          res.json(error)
+        })
     });
 
     return router;

@@ -1,16 +1,10 @@
-module.exports = function(router) {
+module.exports = function(model, router) {
     router.get('/notifications', function(req, res) {
-
-        var notifications = [{id: 3}, {id:4}]
-        res.json(notifications)
+        res.json({"notifications":"Not implemented"})
     });
 
     router.get('/notifications/:notificationId', function(req, res) {
-        var id = req.params.userId;
-        var notification = {
-          id: id
-        }
-        res.json(notification)
+        res.json({"notification":"Not implemented"})
     });
 
     return router;
