@@ -7,7 +7,9 @@
     "postinstall": "npm run build",
     "start": "node start.js",
     "lint": "eslint src",
-    "develop": "node server.js"
+    "develop": "node server.js",
+    "start-api": "node api/index.js",
+    "import-db": "node api/v1/db/import.js"
   },
   "repository": {
     "type": "git",
@@ -58,6 +60,7 @@
     "express": "^4.13.3",
     "history": "^1.13.1",
     "lodash": "^3.10.1",
+    "node-uuid": "^1.4.7",
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.2",
     "react-bootstrap-switch": "^3.4.1",
@@ -69,7 +72,9 @@
     "react-toggle": "^2.0.1",
     "react-upvote": "0.0.2",
     "redux": "^3.0.4",
-    "redux-thunk": "^1.0.0"
+    "redux-thunk": "^1.0.0",
+    "rethinkdb": "^2.3.1",
+    "thinky": "^2.3.2"
   },
   "babel": {
     "presets": [

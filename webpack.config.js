@@ -67,7 +67,7 @@ module.exports = {
       exclude: /node_modules/
     }, {
       test: /\.scss$/,
-      loader: !isProduction ? 'style-loader!css-loader!autoprefixer!sass' : 
+      loader: !isProduction ? 'style-loader!css-loader!autoprefixer!sass' :
       'css-loader!autoprefixer!sass'
     }]
   }
