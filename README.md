@@ -4,6 +4,7 @@ Ask a question and get a reply. It is a working in progress.
 
 This project is for demostration-only of technology like React, Redux and NodeJS
 
+![Screenshot ASK ME](https://raw.githubusercontent.com/niksolaz/askme/master/screenshots/askme_screeshoot.png)
 
 
 ### Installation
